@@ -23,22 +23,22 @@
 <!-- JAVASCRIPT -->
 <script type="text/babel">
 
-//CREATE VARIABLE FOR JSX AND FOR LOCATION
-
-  //VARIABLE FOR JSX
-  var hello = <h1>Hello World</h1>;
-
-  //VARIABLE FOR LOCATION
-  var destination = document.getElementById("app");
-
 // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
   //REACT WHAT - JSX
-ReactDOM.render (
-  //REACT WHAT - JSX
-  hello,
-  //REACT WHERE - DIV WITH ID OF "APP"
-  destination
-)
+ReactDOM.render(React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    "Hell World!"
+  ),
+  React.createElement(
+    "h2",
+    null,
+    "I hope you had a great day!"
+  )
+), document.getElementById("app"));
 
 
 </script>
